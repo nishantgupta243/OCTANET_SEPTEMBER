@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+}
+
+.first{
+    min-height: 100vh;
+    background: url(Assets/cinema.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: slide 1s ease-in-out;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 1.5rem;
+    color: whitesmoke;
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+@keyframes movedown{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    border: 2px solid transparent;
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+
+.main-text{
+    color:blanchedalmond;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.main-text a{
+    color: blanchedalmond;
+    text-decoration: none;
+    background: olivedrab;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    transition: opacity 250ms linear;
+}
+
+.main-text a:hover{
+    opacity: 0.8;
+}
+
+.main-text h2{
+    font-size: 90px;
+}
+
+.main-text p{
+    font-size: 2rem;
+}
